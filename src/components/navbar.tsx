@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useState } from "react";
+import "../CSS/navbar.css"
 
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
@@ -14,9 +15,9 @@ const navigation = [
 
 function Logo() {
   return (
-    <Link href='/' className="relative w-24 aspect-[3/1]"> {/* Link that navigates to root page when clicked */}
+    <Link href='/' className="logo-link"> {/* Link that navigates to root page when clicked */}
       <Image 
-        className="dark:invert"
+        className="logo-img"
         src="/app_icon.png"
         alt="Is There A Bike Rack Icon"
         fill
@@ -61,47 +62,27 @@ function HamurgerSqueeze() {
         {/* The Account Page */}
         <Link href={"/account"}>
           <MenuItem>
-            <a
-              href="#"
-              className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:outline-hidden active:opacity-70"
-            >
-              Account
-            </a>
+            <span className="menu-item"> Account </span>
           </MenuItem>
         </Link>
         {/* The Reports Page */}
         <Link href={"Reports"}>
           <MenuItem>
-            <a
-              href="#"
-              className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:outline-hidden active:opacity-70"
-            >
-              Reports
-            </a>
+            <span className="menu-item"> Reports </span>
           </MenuItem>
         </Link>
 
         {/* The Community Page */}
         <Link href={"/community"}>
           <MenuItem>
-            <a
-              href="#"
-              className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:outline-hidden active:opacity-70"
-            >
-              Community
-            </a>
+            <span className="menu-item"> Community </span>
           </MenuItem>
         </Link>
 
         {/* The About Page */}
         <Link href={"/about"}>
           <MenuItem>
-              <a
-                href="#"
-                className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:outline-hidden active:opacity-70"
-              >
-                About
-              </a>
+              <span className="menu-item"> About </span>
           </MenuItem>
         </Link>
       </MenuItems>

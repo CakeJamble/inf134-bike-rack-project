@@ -1,6 +1,6 @@
 
-export default async function AccountLayout(){
+export default async function AboutLayout(){
   return (
-    <h1>testing account</h1>
+    <h1>testing about</h1>
   );
 }
