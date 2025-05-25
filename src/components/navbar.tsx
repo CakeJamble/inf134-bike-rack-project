@@ -90,18 +90,35 @@ function HamurgerSqueeze() {
   );
 }
 
+function ProfileIcon(){
+  return(
+    <Link href="/account"
+          className="rounded-full overflow-hidden hover:opacity-80 transition-opacity">
+      <Image
+        className="flex bg-red border-2 border-blue-500 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full cursor-pointer object-cover"
+        src="/profileCAT.svg"
+        alt="profile icon"
+        priority
+        width={48}
+        height={48}
+      />
+    </Link>
+  );
+}
+
 export default function NavBar() {
   return (
     <Disclosure as="nav" className="w-full sticky top-0 z-20" style={{ backgroundColor: '#46A70A' }}>
       <div className="w-full px-4 sm:px-6 lg:px-8 ">
       <div className="relative flex items-center justify-between h-20">
       {/* Left-Aligned Logo */}
-          <div className="flex items-center h-fullr" >
+          <div className="flex items-center h-full border-2" >
               <Logo />
           </div>
           {/* Right-Aligned HamburgerDropdown */}
-          <div className="ml-auto flex items-center">
+          <div className="ml-auto flex items-center gap-2">
             <HamurgerSqueeze />
+            <ProfileIcon/>
           </div>
         </div>
       </div>
