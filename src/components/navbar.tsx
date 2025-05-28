@@ -95,7 +95,7 @@ function ProfileIcon(){
     <Link href="/account"
           className="rounded-full overflow-hidden hover:opacity-80 transition-opacity">
       <Image
-        className="flex bg-red border-2 border-blue-500 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full cursor-pointer object-cover"
+        className="flex w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full  cursor-pointer object-cover"
         src="/profileCAT.svg"
         alt="profile icon"
         priority
