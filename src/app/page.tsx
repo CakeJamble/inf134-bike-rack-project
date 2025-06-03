@@ -1,11 +1,14 @@
+"use client";
 import Image from 'next/image';
 import NavBar from "@/components/navbar";
 import MyMap from "@/components/map";
 import { Button } from '@headlessui/react';
 import './page.css'
 import { AdvancedMarker, Pin } from '@vis.gl/react-google-maps';
+import BottomSheet from '@/components/bottomSheet';
 
 export default function Home() {
+
   return (
     <>
       {/* <NavBar /> */} {/* Sirena commented this out 5/7 moved to outer layout.tsx*/}
@@ -20,6 +23,7 @@ export default function Home() {
             height="25"
           />
         </Button>
+        <BottomSheet></BottomSheet>
       </div>
     </>
   );
