@@ -28,7 +28,7 @@ function Logo() {
   )
 }
 
-function classNames(...classes) {
+function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(' ')
 }
 
@@ -65,12 +65,12 @@ function HamurgerSqueeze() {
             <span className="menu-item"> Account </span>
           </MenuItem>
         </Link>
-        {/* The Reports Page */}
-        <Link href={"Reports"}>
+        {/* The Reports Page removed 6/3 bc not in wireframes*/}
+        {/* <Link href={"Reports"}>
           <MenuItem>
             <span className="menu-item"> Reports </span>
           </MenuItem>
-        </Link>
+        </Link> */}
 
         {/* The Community Page */}
         <Link href={"/community"}>
