@@ -1,0 +1,29 @@
+.logo-link{
+    position: relative;
+    width: 6rem;
+    aspect-ratio: 3/1;
+}
+
+.logo-img{
+    filter: invert(100%)
+}
+
+.menu-item{
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    color: #374151; /* text-gray 700 */
+    opacity: 1;
+    outline: none;
+    transition: opacity 0.2s ease;
+}
+
+.menu-item:hover,
+.menu-item:focus{
+    background-color: #f3f4f6; /* background-gray 100*/ 
+    outline: none;
+}
+
+.menu-item:active{
+    opacity: 0.7;
+}

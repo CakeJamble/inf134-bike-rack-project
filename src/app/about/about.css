@@ -1,0 +1,15 @@
+h1{
+    font-size: 2rem;
+}
+h3 {
+    font-size: .9375rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: .875rem;
+}
+
+.groups{
+    width: 100%;
+}
