@@ -41,7 +41,7 @@ function HamurgerSqueeze() {
     // Dropdown Icon (3 bars)
     <Menu as="div" className="relative ml-3">
       <div>
-        <MenuButton className="flex flex-col justify-center items-center" onClick={handleClick}
+        <MenuButton className="flex flex-col justify-center items-center"
         >
           <span className={`bg-white block transition-all duration-300 ease-out origin-center 
                           h-0.5 w-6 rounded-sm ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}` } >
@@ -112,7 +112,7 @@ export default function NavBar() {
       <div className="w-full px-4 sm:px-6 lg:px-8 ">
       <div className="relative flex items-center justify-between h-20">
       {/* Left-Aligned Logo */}
-          <div className="flex items-center h-full border-2" >
+          <div className="flex items-center h-full" >
               <Logo />
           </div>
           {/* Right-Aligned HamburgerDropdown */}

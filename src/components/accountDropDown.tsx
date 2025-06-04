@@ -14,10 +14,10 @@ const AccountDropDown: React.FC<Props> = ({label}) => {
             <div className="button">
                 <h1>{label}</h1>
                 <div>
-                    <span className={`block transition-all duration-300 ease-out 
-                          h-0.5 w-4 rounded-sm -rotate-45 -translate-x-2.5`} ></span>
-                    <span className={`block transition-all duration-300 ease-out 
-                          h-0.5 w-4 rounded-sm rotate-45 -translate-y-0.5`} ></span>
+                    <span className={`arrow block transition-all duration-300 ease-out 
+                          h-0.5 w-4 rounded-sm -rotate-45 -translate-x-2.5 translate-y-2`} ></span>
+                    <span className={`arrow block transition-all duration-300 ease-out 
+                          h-0.5 w-4 rounded-sm rotate-45 -translate-y-4`} ></span>
                 </div>
             </div>
         </div>

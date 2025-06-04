@@ -58,6 +58,11 @@ div.buttons Button{
     justify-content: center;
 }
 
+#reportButton{
+    display: flex;
+    flex-direction: row;
+}
+
 h1{
     color: #444444;
     font-size: 20px;
