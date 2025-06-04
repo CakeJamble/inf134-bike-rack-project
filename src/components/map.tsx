@@ -12,18 +12,21 @@ const bikeRacks: Poi[] = [
 const MyMap = () => {
   // need NEXT_PUBLIC to expose environemnt vairables to client-side
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+  const ID = process.env.NEXT_PUBLIC_MAP_ID;
 
   return (
     <APIProvider
       apiKey={apiKey!}
-      onLoad={() => console.log(`Maps API has loaded. key: ${apiKey}`)}
+      onLoad={() => {}}
     >
       <Map
         defaultZoom={13}
         defaultCenter={{ lat: 33.669445, lng: -117.823059 }}
+        mapId={ID!}
         onCameraChanged={(ev: MapCameraChangedEvent) =>
           console.log('camera changed:', ev.detail.center, 'zoom:', ev.detail.zoom)
         }>
+        <BikeRackMarkers pois={bikeRacks} />
       </Map>
     </APIProvider>
   );
