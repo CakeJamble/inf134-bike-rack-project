@@ -4,7 +4,7 @@ export default async function AboutLayout(){
   return (
     <>
       <div className="flex flex-col items items-center m-6">
-        <h1 className="mx-auto text-center italic">About Us</h1>
+        <h1 className="italic">About Us</h1>
         
         <div className="py-3 groups">
           <h3>How Does Rating Work?</h3>

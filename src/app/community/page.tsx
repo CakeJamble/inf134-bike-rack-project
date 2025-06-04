@@ -40,7 +40,7 @@ export default function CommunityLayout() {
     <>
       <div className="max-w-4xl mx-auto p-6">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
-          <h1 className="text-2rem italic text-gray-900 mx-auto text-center">News Feed</h1>
+          <h1 className="text-3xl italic text-gray-900 mx-auto text-center">News Feed</h1>
           <SearchBar />
           <div className="flex flex-row gap-2">
             <UserStatus title="Online" maxRange={200}/>
