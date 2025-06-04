@@ -3,7 +3,7 @@ import { useState, useRef } from 'react'
 import { Button } from '@headlessui/react';
 import './bottomSheet.css'
 
-const snapPoints = [0.65, 0.25];
+const snapPoints = [0.65, 0.27];
 
 const BottomSheet = () => {
     const [isOpen, setOpen] = useState(false);
@@ -16,7 +16,12 @@ const BottomSheet = () => {
             isOpen={true} 
             onClose={() => setOpen(true)}
             initialSnap={1}
-            snapPoints={snapPoints}>
+            snapPoints={snapPoints}
+            onSnap={(snapIndex) => {
+                if (snapIndex >= snapPoints.length) {
+                    snapIndex = 1;
+                }
+            }}>
             <Sheet.Container>
             <Sheet.Header />
             <Sheet.Content>{
