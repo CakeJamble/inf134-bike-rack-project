@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useState } from "react";
-import "../CSS/navbar.css"
+import "./navbar.css"
 
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
@@ -41,15 +41,15 @@ function HamurgerSqueeze() {
     // Dropdown Icon (3 bars)
     <Menu as="div" className="relative ml-3">
       <div>
-        <MenuButton className="flex flex-col justify-center items-center "
+        <MenuButton className="flex flex-col justify-center items-center" onClick={handleClick}
         >
-          <span className={`bg-white block transition-all duration-300 ease-out 
-                          h-0.5 w-6 rounded-sm ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`} >
+          <span className={`bg-white block transition-all duration-300 ease-out origin-center 
+                          h-0.5 w-6 rounded-sm ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}` } >
           </span>
-          <span className={`bg-white block transition-all duration-300 ease-out 
-                          h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? 'opacity-0' : 'opacity-100'}`} >
+          <span className={`bg-white block transition-all duration-300 ease-out origin-center
+                          h-0.5 w-6 rounded-sm ${isOpen ? 'opacity-0' : 'opacity-100'}`} >
           </span>
-          <span className={`bg-white block transition-all duration-300 ease-out 
+          <span className={`bg-white block transition-all duration-300 ease-out origin-center
                           h-0.5 w-6 rounded-sm ${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`} >
           </span>    
         </MenuButton>

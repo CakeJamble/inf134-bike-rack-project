@@ -27,3 +27,8 @@
 .menu-item:active{
     opacity: 0.7;
 }
+
+span{
+    display: inline-block;
+    position: relative;
+}

@@ -1,18 +1,28 @@
 import { Sheet, SheetRef } from 'react-modal-sheet'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect} from 'react'
 import { Button } from '@headlessui/react';
 import './bottomSheet.css'
 
-const snapPoints = [0.65, 0.27];
+const snapPoints = [0.65, 225];
 
 const BottomSheet = () => {
+    const [isClient, setIsClient] = useState(false);
+
     const [isOpen, setOpen] = useState(false);
     const ref = useRef<SheetRef>(null);
     const snapTo = (i: number) => ref.current?.snapTo(i);
 
+    useEffect(() => {
+        setIsClient(true);
+        setOpen(true); // Open after mount
+    }, []);
+
+    if (!isClient) return null;
+
     return (
         <>
         <Sheet
+            ref={ref}
             isOpen={true} 
             onClose={() => setOpen(true)}
             initialSnap={1}
